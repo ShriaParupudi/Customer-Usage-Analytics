@@ -1,0 +1,10 @@
+data/raw/*
+data/interim/*
+data/warehouse/*
+*.duckdb
+*.csv.gz
+*.parquet
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
