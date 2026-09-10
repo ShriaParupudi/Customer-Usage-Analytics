@@ -1,0 +1,101 @@
+account_id,account_name,industry,csm_owner,plan_tier,arr_usd,risk_band,risk_score,risk_reasons,core_events,active_users,active_days,seat_utilisation,feature_areas_adopted,consecutive_zero_usage_months,days_to_renewal
+ACC-00056,GraniteDynamics 016,Financial Services,H. Nowak,enterprise,135837.6,High,83,no usage for 3 months; renews in 48 days,0,0,0,0.0,0,3,48
+ACC-00264,CorvusPartners 058,Retail,D. Sharma,enterprise,100166.28,High,83,no usage for 19 months; renews in 17 days,0,0,0,0.0,0,19,17
+ACC-00274,NorthIndustries 221,Education,G. Alvarez,enterprise,79361.52,High,83,no usage for 6 months; renews in 41 days,0,0,0,0.0,0,6,41
+ACC-00155,HalcyonTechnologies 235,,E. Rossi,growth,8570.4,High,83,no usage for 21 months; renews in 29 days,0,0,0,0.0,0,21,29
+ACC-00134,OnyxPartners 034,Financial Services,B. Lindqvist,growth,8051.88,High,83,no usage for 7 months; renews in 34 days,0,0,0,0.0,0,7,34
+ACC-00214,PinnacleIndustries 077,Technology,B. Lindqvist,growth,7296.84,High,83,no usage for 22 months; renews in 79 days,0,0,0,0.0,0,22,79
+ACC-00150,PinnacleTechnologies 055,Financial Services,H. Nowak,growth,7187.52,High,83,no usage for 21 months; renews in 24 days,0,0,0,0.0,0,21,24
+ACC-00316,CedarAnalytics 467,Non-profit,C. Moreau,growth,5861.16,High,83,no usage for 23 months; renews in 52 days,0,0,0,0.0,0,23,52
+ACC-00483,SummitDynamics 400,Education,B. Lindqvist,growth,4300.32,High,83,no usage for 10 months; renews in 90 days,0,0,0,0.0,0,10,90
+ACC-00210,RiverstoneIndustries 197,Technology,H. Nowak,starter,1672.44,High,83,no usage for 24 months; renews in 68 days,0,0,0,0.0,0,24,68
+ACC-00291,SummitSolutions 246,Professional Services,C. Moreau,starter,859.8,High,83,no usage for 21 months; renews in 19 days,0,0,0,0.0,0,21,19
+ACC-00445,SummitCollective 312,Financial Services,D. Sharma,enterprise,128420.16,High,73,no usage for 15 months,0,0,0,0.0,0,15,298
+ACC-00226,HarborTechnologies 271,Financial Services,A. Okafor,enterprise,107543.16,High,73,no usage for 2 months,0,0,0,0.0,0,2,110
+ACC-00390,OnyxGroup 452,Technology,B. Lindqvist,enterprise,86140.56,High,73,no usage for 18 months,0,0,0,0.0,0,18,202
+ACC-00258,CorvusCollective 168,,B. Lindqvist,enterprise,72983.4,High,73,no usage for 24 months,0,0,0,0.0,0,24,221
+ACC-00084,KestrelHoldings 110,Technology,F. Tanaka,enterprise,53994.36,High,73,no usage for 24 months,0,0,0,0.0,0,24,118
+ACC-00394,HalcyonWorks 477,Non-profit,E. Rossi,business,48671.04,High,73,no usage for 18 months,0,0,0,0.0,0,18,206
+ACC-00270,OnyxDynamics 100,Manufacturing,G. Alvarez,business,46626.84,High,73,no usage for 24 months,0,0,0,0.0,0,24,245
+ACC-00285,PinnacleWorks 033,Retail,C. Moreau,business,41851.92,High,73,no usage for 12 months,0,0,0,0.0,0,12,286
+ACC-00447,IronIndustries 377,Manufacturing,A. Okafor,business,29108.76,High,73,no usage for 15 months,0,0,0,0.0,0,15,301
+ACC-00136,KestrelCollective 132,Professional Services,A. Okafor,business,20462.76,High,73,no usage for 24 months,0,0,0,0.0,0,24,250
+ACC-00374,OnyxPartners 430,Professional Services,A. Okafor,growth,14586.6,High,73,no usage for 20 months,0,0,0,0.0,0,20,155
+ACC-00451,CorvusPartners 322,Professional Services,H. Nowak,growth,13315.2,High,73,no usage for 15 months,0,0,0,0.0,0,15,309
+ACC-00268,EmberlySolutions 306,Technology,D. Sharma,growth,12287.4,High,73,no usage for 24 months,0,0,0,0.0,0,24,244
+ACC-00377,CorvusDynamics 388,Technology,G. Alvarez,growth,12260.64,High,73,no usage for 6 months,0,0,0,0.0,0,6,159
+ACC-00401,BlueHoldings 398,Healthcare,C. Moreau,growth,11279.88,High,73,no usage for 18 months,0,0,0,0.0,0,18,220
+ACC-00385,QuartzLabs 361,Education,G. Alvarez,growth,6475.08,High,73,no usage for 19 months,0,0,0,0.0,0,19,185
+ACC-00034,PinnacleWorks 297,Technology,D. Sharma,growth,3832.56,High,73,no usage for 24 months,0,0,0,0.0,0,24,357
+ACC-00030,OnyxDynamics 232,Education,B. Lindqvist,starter,3673.08,High,73,no usage for 24 months,0,0,0,0.0,0,24,351
+ACC-00079,CedarWorks 225,Education,E. Rossi,starter,2077.32,High,73,no usage for 4 months,0,0,0,0.0,0,4,104
+ACC-00238,PinnacleIndustries 209,Technology,B. Lindqvist,starter,1962.84,High,73,no usage for 24 months,0,0,0,0.0,0,24,137
+ACC-00304,VertexSolutions 138,Retail,C. Moreau,starter,1728.48,High,73,no usage for 22 months,0,0,0,0.0,0,22,340
+ACC-00432,HalcyonTechnologies 499,Retail,E. Rossi,starter,1694.16,High,73,no usage for 16 months,0,0,0,0.0,0,16,273
+ACC-00132,SummitHoldings 158,Technology,D. Sharma,starter,1438.08,High,73,no usage for 24 months,0,0,0,0.0,0,24,247
+ACC-00399,HarborAnalytics 359,Technology,H. Nowak,starter,1397.76,High,73,no usage for 18 months,0,0,0,0.0,0,18,215
+ACC-00337,IronAnalytics 443,Professional Services,A. Okafor,starter,1238.52,High,73,no usage for 22 months,0,0,0,0.0,0,22,101
+ACC-00364,BlueCollective 420,Healthcare,E. Rossi,starter,1033.2,High,73,no usage for 11 months,0,0,0,0.0,0,11,144
+ACC-00344,LumenSolutions 426,Technology,B. Lindqvist,starter,753.96,High,73,no usage for 21 months,0,0,0,0.0,0,21,110
+ACC-00295,IronWorks 069,Manufacturing,B. Lindqvist,starter,2339.16,High,63,sustained decline -77.0%; only 13.0% of seats active; uses 1 of 6 feature areas; active on only 2 days; renews in 26 days,2,2,2,0.125,1,0,26
+ACC-00125,SolsticeWorks 129,Non-profit,F. Tanaka,enterprise,65570.16,Medium,55,sustained decline -55.0%; MoM drop -52.0%; renews in 17 days,203,58,17,0.4833,4,0,17
+ACC-00038,CobaltCollective 084,Retail,E. Rossi,growth,6580.44,Medium,55,sustained decline -41.0%; MoM drop -47.0%; only 11.0% of seats active,19,3,13,0.1071,2,0,372
+ACC-00207,KestrelGroup 044,Professional Services,E. Rossi,starter,2697.36,Medium,55,sustained decline -39.0%; MoM drop -52.0%; renews in 58 days,16,7,14,0.3333,2,0,58
+ACC-00052,SolsticeWorks 261,Education,A. Okafor,starter,1950.48,Medium,55,sustained decline -37.0%; MoM drop -48.0%; renews in 41 days,12,6,10,0.4,2,0,41
+ACC-00081,HalcyonSystems 015,Education,F. Tanaka,starter,1656.48,Medium,50,MoM drop -48.0%; usage concentrated in one user; only 8.0% of seats active; renews in 15 days,11,1,9,0.0769,3,0,15
+ACC-00064,BlueHoldings 002,Healthcare,G. Alvarez,business,30632.64,Medium,48,usage concentrated in one user; only 1.0% of seats active; uses 1 of 6 feature areas; active on only 1 days; renews in 58 days,1,1,1,0.0114,1,0,58
+ACC-00037,BlueSolutions 090,Manufacturing,A. Okafor,enterprise,105297.0,Medium,45,sustained decline -27.0%; only 16.0% of seats active; renews in 37 days,85,33,24,0.1594,3,0,37
+ACC-00319,IronWorks 333,Technology,D. Sharma,business,36164.88,Medium,45,sustained decline -35.0%; only 16.0% of seats active; renews in 54 days,18,14,12,0.1647,2,0,54
+ACC-00067,CobaltGroup 128,Healthcare,G. Alvarez,business,31433.64,Medium,45,sustained decline -35.0%; only 8.0% of seats active; renews in 66 days,19,6,15,0.08,3,0,66
+ACC-00360,IronTechnologies 487,Education,H. Nowak,business,30103.56,Medium,45,sustained decline -33.0%; MoM drop -51.0%,42,26,20,0.3059,5,0,128
+ACC-00211,NorthTechnologies 199,Retail,B. Lindqvist,business,29483.04,Medium,45,sustained decline -37.0%; only 30.0% of seats active; renews in 72 days,245,22,28,0.2973,3,0,72
+ACC-00208,HarborTechnologies 139,Retail,C. Moreau,growth,11282.88,Medium,45,sustained decline -82.0%; only 29.0% of seats active; renews in 64 days,23,12,16,0.2927,2,0,64
+ACC-00306,GraniteHoldings 170,Healthcare,C. Moreau,growth,10029.84,Medium,45,sustained decline -26.0%; MoM drop -40.0%,67,18,24,0.4186,3,0,347
+ACC-00362,HarborAnalytics 491,Technology,B. Lindqvist,growth,9757.32,Medium,45,sustained decline -36.0%; MoM drop -42.0%,76,20,29,0.4762,2,0,139
+ACC-00317,GraniteCollective 324,Education,G. Alvarez,growth,9633.24,Medium,45,sustained decline -56.0%; only 27.0% of seats active; renews in 52 days,26,10,16,0.2703,3,0,52
+ACC-00313,WillowSystems 435,Manufacturing,D. Sharma,growth,7839.72,Medium,45,sustained decline -56.0%; only 15.0% of seats active; renews in 43 days,28,5,15,0.1471,2,0,43
+ACC-00489,HarborWorks 381,Technology,E. Rossi,growth,7720.08,Medium,45,sustained decline -33.0%; MoM drop -45.0%,42,14,23,0.4667,2,0,113
+ACC-00472,NorthIndustries 485,Technology,A. Okafor,growth,6281.28,Medium,45,sustained decline -77.0%; only 28.0% of seats active; renews in 41 days,8,7,8,0.28,2,0,41
+ACC-00009,BlueGroup 200,Education,H. Nowak,growth,4743.72,Medium,45,sustained decline -34.0%; MoM drop -47.0%,54,9,18,0.4286,3,0,260
+ACC-00231,NorthSystems 111,Retail,B. Lindqvist,growth,8122.68,Medium,43,sustained decline -68.0%; only 17.0% of seats active; uses 1 of 6 feature areas,9,5,8,0.1667,1,0,125
+ACC-00118,WillowLabs 193,Professional Services,C. Moreau,starter,1531.92,Medium,40,MoM drop -53.0%; usage concentrated in one user; renews in 19 days,16,4,10,0.3333,3,0,19
+ACC-00075,HalcyonAnalytics 059,Technology,B. Lindqvist,starter,1504.44,Medium,40,MoM drop -43.0%; only 25.0% of seats active; renews in 85 days,13,3,12,0.25,4,0,85
+ACC-00137,MeridianWorks 057,Professional Services,C. Moreau,growth,3105.96,Medium,38,usage concentrated in one user; only 8.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.0833,1,0,256
+ACC-00265,VertexHoldings 182,,C. Moreau,starter,2559.6,Medium,38,usage concentrated in one user; only 5.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.0526,1,0,234
+ACC-00101,EmberlyCollective 108,Retail,D. Sharma,starter,2027.76,Medium,38,usage concentrated in one user; only 7.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.0714,1,0,153
+ACC-00497,KestrelSolutions 330,Healthcare,C. Moreau,starter,989.88,Medium,38,usage concentrated in one user; only 14.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.1429,1,0,165
+ACC-00368,AsterDynamics 472,Professional Services,C. Moreau,starter,820.92,Medium,38,usage concentrated in one user; only 17.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.1667,1,0,148
+ACC-00234,WillowIndustries 281,Non-profit,B. Lindqvist,starter,663.36,Medium,38,usage concentrated in one user; only 20.0% of seats active; uses 1 of 6 feature areas; active on only 1 days,1,1,1,0.2,1,0,127
+ACC-00192,VertexGroup 248,Manufacturing,D. Sharma,enterprise,118444.08,Medium,35,sustained decline -41.0%; only 15.0% of seats active,65,30,23,0.1523,5,0,370
+ACC-00041,GraniteHoldings 302,Technology,G. Alvarez,enterprise,81365.04,Medium,35,sustained decline -50.0%; only 16.0% of seats active,38,23,15,0.1565,5,0,378
+ACC-00423,QuartzWorks 405,Healthcare,C. Moreau,enterprise,80104.32,Medium,35,sustained decline -82.0%; only 20.0% of seats active,55,31,22,0.1975,2,0,260
+ACC-00156,EmberlyGroup 284,Non-profit,G. Alvarez,business,60559.68,Medium,35,sustained decline -26.0%; only 23.0% of seats active,107,33,29,0.226,2,0,305
+ACC-00200,KestrelPartners 022,Technology,B. Lindqvist,business,42077.4,Medium,35,sustained decline -26.0%; renews in 44 days,362,56,30,0.5385,4,0,44
+ACC-00292,GraniteDynamics 280,Technology,A. Okafor,business,41024.64,Medium,35,sustained decline -52.0%; renews in 21 days,109,40,19,0.396,3,0,21
+ACC-00320,CedarLabs 313,,E. Rossi,business,39790.44,Medium,35,sustained decline -57.0%; renews in 59 days,214,50,28,0.5319,3,0,59
+ACC-00168,KestrelGroup 176,Education,D. Sharma,business,30316.56,Medium,35,sustained decline -74.0%; only 19.0% of seats active,22,15,16,0.1948,2,0,330
+ACC-00429,CobaltHoldings 458,Healthcare,H. Nowak,business,30166.56,Medium,35,sustained decline -68.0%; only 17.0% of seats active,25,12,17,0.1667,2,0,270
+ACC-00244,AsterGroup 032,Professional Services,A. Okafor,business,29178.24,Medium,35,sustained decline -36.0%; only 29.0% of seats active,39,21,21,0.2917,2,0,169
+ACC-00325,NorthTechnologies 331,Healthcare,F. Tanaka,business,22030.56,Medium,35,sustained decline -26.0%; renews in 64 days,47,16,20,0.3077,3,0,64
+ACC-00005,OnyxCollective 012,Technology,G. Alvarez,growth,15872.4,Medium,35,sustained decline -37.0%; only 24.0% of seats active,20,14,15,0.2414,2,0,248
+ACC-00259,PinnacleTechnologies 187,Manufacturing,B. Lindqvist,growth,9046.8,Medium,35,sustained decline -57.0%; only 19.0% of seats active,49,7,22,0.1944,2,0,222
+ACC-00478,LumenDynamics 448,Technology,F. Tanaka,growth,7576.56,Medium,35,sustained decline -40.0%; renews in 65 days,85,19,25,0.6333,4,0,65
+ACC-00102,LumenSolutions 162,Education,D. Sharma,growth,7520.76,Medium,35,sustained decline -40.0%; only 19.0% of seats active,8,6,7,0.1875,2,0,154
+ACC-00327,CorvusPartners 454,Technology,A. Okafor,growth,7413.72,Medium,35,sustained decline -46.0%; renews in 74 days,26,13,15,0.4194,4,0,74
+ACC-00315,OnyxGroup 320,Healthcare,B. Lindqvist,growth,7119.84,Medium,35,sustained decline -27.0%; renews in 49 days,35,10,17,0.3571,2,0,49
+ACC-00275,IronLabs 157,Non-profit,D. Sharma,growth,6734.16,Medium,35,sustained decline -90.0%; only 21.0% of seats active,14,6,12,0.2143,2,0,257
+ACC-00217,MeridianAnalytics 167,Professional Services,D. Sharma,growth,6099.48,Medium,35,sustained decline -29.0%; renews in 87 days,33,11,19,0.4231,3,0,87
+ACC-00419,OnyxSolutions 474,Education,A. Okafor,growth,4793.04,Medium,35,sustained decline -88.0%; only 16.0% of seats active,5,3,5,0.1579,2,0,255
+ACC-00215,OnyxHoldings 254,,F. Tanaka,starter,2837.88,Medium,35,sustained decline -56.0%; renews in 18 days,18,6,11,0.3,4,0,18
+ACC-00329,SolsticeIndustries 437,Financial Services,G. Alvarez,starter,2526.48,Medium,35,sustained decline -32.0%; renews in 81 days,20,6,13,0.3,4,0,81
+ACC-00448,CobaltGroup 392,Professional Services,A. Okafor,starter,2269.08,Medium,35,sustained decline -34.0%; only 22.0% of seats active,15,4,10,0.2222,3,0,302
+ACC-00074,CobaltHoldings 062,Technology,B. Lindqvist,starter,834.96,Medium,35,sustained decline -26.0%; renews in 84 days,27,3,18,0.5,2,0,84
+ACC-00035,CedarWorks 093,Healthcare,H. Nowak,growth,21501.24,Medium,30,MoM drop -60.0%; only 11.0% of seats active,10,9,8,0.1125,2,0,364
+ACC-00201,BlueGroup 068,Healthcare,G. Alvarez,growth,13919.4,Medium,30,usage concentrated in one user; only 6.0% of seats active; renews in 44 days,53,3,23,0.0556,2,0,44
+ACC-00356,VertexHoldings 446,Retail,E. Rossi,growth,13557.36,Medium,30,usage concentrated in one user; only 12.0% of seats active; renews in 35 days,102,6,25,0.12,2,0,35
+ACC-00188,CedarIndustries 005,Manufacturing,F. Tanaka,growth,12528.96,Medium,30,usage concentrated in one user; only 19.0% of seats active; renews in 20 days,60,9,17,0.1915,3,0,20
+ACC-00260,SolsticeIndustries 041,Manufacturing,H. Nowak,growth,8048.16,Medium,30,usage concentrated in one user; only 13.0% of seats active; renews in 39 days,66,4,23,0.1333,3,0,39
+ACC-00174,GranitePartners 214,Technology,H. Nowak,starter,3565.56,Medium,30,MoM drop -44.0%; only 29.0% of seats active,52,8,23,0.2857,6,0,341
+ACC-00059,BlueDynamics 112,Technology,B. Lindqvist,starter,2111.76,Medium,30,usage concentrated in one user; only 13.0% of seats active; renews in 52 days,38,2,22,0.1333,3,0,52
+ACC-00322,CorvusCollective 432,Education,A. Okafor,starter,2073.48,Medium,30,usage concentrated in one user; only 7.0% of seats active; renews in 63 days,23,1,16,0.0714,3,0,63
+ACC-00058,CorvusHoldings 278,Technology,B. Lindqvist,starter,1368.6,Medium,30,usage concentrated in one user; only 27.0% of seats active; renews in 51 days,15,3,11,0.2727,4,0,51

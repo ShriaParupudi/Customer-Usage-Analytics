@@ -1,0 +1,77 @@
+erDiagram
+    ACCOUNTS ||--o{ USERS : "employs"
+    ACCOUNTS ||--o{ SUBSCRIPTIONS : "has terms"
+    ACCOUNTS ||--o{ PRODUCT_USAGE_EVENTS : "generates"
+    ACCOUNTS ||--o{ SUPPORT_TICKETS : "raises"
+    USERS ||--o{ PRODUCT_USAGE_EVENTS : "performs"
+    USERS ||--o{ SUPPORT_TICKETS : "submits"
+    FEATURE_CATALOG ||--o{ PRODUCT_USAGE_EVENTS : "classifies"
+
+    ACCOUNTS {
+        string account_id PK
+        string account_name
+        string industry
+        string country
+        string employee_band
+        date signup_date
+        string acquisition_channel
+        string csm_owner "nullable"
+        boolean is_internal_test
+    }
+
+    USERS {
+        string user_id PK
+        string account_id FK
+        date user_created_date
+        date deactivated_date "nullable"
+        string role
+        string department
+        string email_domain
+        string invited_by_user_id FK "self"
+    }
+
+    SUBSCRIPTIONS {
+        string subscription_id PK
+        string account_id FK
+        string plan_tier
+        int seats_licensed
+        decimal mrr_usd
+        string billing_frequency
+        date term_start_date
+        date term_end_date
+        string status
+        string cancel_reason "nullable"
+    }
+
+    PRODUCT_USAGE_EVENTS {
+        string event_id PK
+        string account_id FK
+        string user_id FK
+        timestamp event_ts
+        string event_name FK
+        string feature_area
+        string surface
+        string session_id
+        int event_qty
+        int duration_ms "nullable"
+    }
+
+    SUPPORT_TICKETS {
+        string ticket_id PK
+        string account_id FK
+        string user_id FK "nullable"
+        timestamp created_ts
+        timestamp resolved_ts "nullable"
+        string priority
+        string category
+        int csat_score "nullable"
+    }
+
+    FEATURE_CATALOG {
+        string event_name PK
+        string feature_area
+        boolean is_core_action
+        string adoption_tier
+        date launched_date
+        string description
+    }

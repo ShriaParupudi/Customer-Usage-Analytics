@@ -1,0 +1,14 @@
+# Core pipeline
+duckdb>=1.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=14.0.0        # Parquet read/write
+PyYAML>=6.0            # config/config.yml
+
+# Development / quality
+pytest>=7.4.0
+ruff>=0.4.0            # linting + formatting
+
+# Exploration (notebooks only - not required by the pipeline)
+jupyterlab>=4.0.0
+matplotlib>=3.7.0

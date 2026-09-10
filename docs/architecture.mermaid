@@ -1,0 +1,70 @@
+flowchart TB
+    subgraph GEN["0 - Synthetic Data Generation (Python)"]
+        G1["generate_data.py<br/>behavioural simulation<br/>+ injected defects"]
+    end
+
+    subgraph RAW["1 - Raw Layer (files on disk)"]
+        R1["accounts.csv"]
+        R2["users.csv"]
+        R3["subscriptions.csv"]
+        R4["product_usage_events.parquet"]
+        R5["support_tickets.csv"]
+        R6["feature_catalog.csv<br/>(seed, in git)"]
+    end
+
+    subgraph ING["2 - Ingestion (DuckDB schema: raw)"]
+        I1["ingest.py<br/>load as-is, no cleaning<br/>+ record_loaded_at"]
+    end
+
+    subgraph DQ["3 - Data Quality Gate"]
+        Q1["quality_checks.py<br/>15 checks<br/>severity: FAIL / WARN"]
+        Q2["outputs/dq_report.md"]
+    end
+
+    subgraph STG["4 - Staging (schema: staging)"]
+        S1["stg_accounts<br/>stg_users<br/>stg_subscriptions<br/>stg_usage_events<br/>stg_support_tickets<br/><br/>typed - deduped - standardised<br/>test accounts excluded"]
+    end
+
+    subgraph MART["5 - Marts (schema: marts)"]
+        M1["dim_month (SPINE)<br/>dim_account - dim_user - dim_feature"]
+        M2["fct_usage_events<br/>fct_account_month<br/>fct_user_month<br/>fct_feature_month"]
+    end
+
+    subgraph ANA["6 - Analytics (schema: analytics)"]
+        A1["agg_monthly_kpis"]
+        A2["account_health_monthly<br/>segments - trends - risk flags"]
+        A3["account_health_current"]
+    end
+
+    subgraph OUT["7 - Reporting Layer"]
+        O1["outputs/*.csv exports"]
+        O2["Dashboard<br/>Looker Studio / Power BI / Tableau"]
+    end
+
+    GEN --> RAW --> ING --> DQ
+    Q1 -->|"FAIL: stop the pipeline"| STOP["Build fails"]
+    Q1 -->|"PASS or WARN"| STG
+    Q1 --> Q2
+    STG --> MART
+    M1 --> M2
+    MART --> ANA
+    A2 --> A3
+    ANA --> OUT
+    O1 --> O2
+
+    classDef gen fill:#e8eaf6,stroke:#5c6bc0,color:#1a237e
+    classDef raw fill:#fff3e0,stroke:#fb8c00,color:#e65100
+    classDef dq fill:#ffebee,stroke:#e53935,color:#b71c1c
+    classDef stg fill:#e0f7fa,stroke:#00acc1,color:#006064
+    classDef mart fill:#e8f5e9,stroke:#43a047,color:#1b5e20
+    classDef ana fill:#f3e5f5,stroke:#8e24aa,color:#4a148c
+    classDef out fill:#eceff1,stroke:#546e7a,color:#263238
+
+    class G1 gen
+    class R1,R2,R3,R4,R5,R6 raw
+    class I1 raw
+    class Q1,Q2,STOP dq
+    class S1 stg
+    class M1,M2 mart
+    class A1,A2,A3 ana
+    class O1,O2 out

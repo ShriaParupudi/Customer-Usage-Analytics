@@ -1,0 +1,156 @@
+# =============================================================================
+# Project configuration
+#
+# Rule for this project: no magic numbers in code. Every threshold that a
+# stakeholder might reasonably want to change lives here, so that changing
+# "declining = -40%" to "-30%" is a one-line config edit, not a hunt through SQL.
+# =============================================================================
+
+project:
+  name: customer-usage-analytics
+  random_seed: 42          # makes the synthetic dataset reproducible
+  timezone: UTC
+
+# ---------------------------------------------------------------------------
+# Synthetic data generation (Phase 1)
+# ---------------------------------------------------------------------------
+generation:
+  n_accounts: 500
+  start_date: "2024-08-01"
+  end_date: "2026-07-31"        # 24 full months
+
+  # Share of accounts assigned to each behavioural archetype. Must sum to 1.0.
+  archetype_mix:
+    healthy_stable: 0.30
+    growing: 0.15
+    slow_decliner: 0.15
+    cliff_decliner: 0.08
+    seasonal: 0.10
+    zero_usage: 0.07
+    power_user: 0.08
+    single_champion: 0.07
+
+  plan_mix:
+    starter: 0.35
+    growth: 0.32
+    business: 0.22
+    enterprise: 0.11
+
+  internal_test_accounts: 3
+
+  # Rates for deliberately injected data-quality defects (Phase 1 -> Phase 3)
+  defects:
+    duplicate_event_rate: 0.004
+    duplicate_account_rows: 4
+    null_industry_rate: 0.04
+    null_department_rate: 0.08
+    pre_signup_event_rate: 0.0008
+    future_dated_events: 25
+    invalid_subscription_terms: 5
+    overlapping_subscription_terms: 6
+    orphan_user_events: 400
+    orphan_account_users: 12
+    account_mismatch_events: 250
+    feature_area_mismatch_events: 300
+    negative_event_qty: 150
+    invalid_seats: 6
+    casing_variant_rate: 0.06
+
+# ---------------------------------------------------------------------------
+# Data quality thresholds (Phase 3)
+# severity: FAIL stops the pipeline, WARN is logged and the build continues
+# ---------------------------------------------------------------------------
+data_quality:
+  max_null_rate_industry: 0.05          # WARN
+  max_orphan_fk_rate: 0.0               # FAIL - referential integrity is not negotiable
+  max_duplicate_pk_rate: 0.0            # FAIL
+  max_future_event_days: 0              # FAIL
+  max_negative_qty_rows: 0              # FAIL
+  max_null_rate_department: 0.15        # WARN
+
+  # ---------------------------------------------------------------------------
+  # Accepted exceptions (baselines)
+  #
+  # A gate that always fails gets switched off, and then it protects nothing.
+  # Real data-quality frameworks solve this the same way: every known defect
+  # gets a documented BASELINE and a documented RESOLUTION. The gate fails only
+  # when a count EXCEEDS its baseline - i.e. it detects REGRESSION, new breakage
+  # rather than old breakage.
+  #
+  # Baselines are stable because the dataset is seeded. If you change the seed
+  # or the generation parameters, re-baseline these numbers.
+  #
+  # Reviewing this list is the point: it is the honest, written record of every
+  # known problem in the data and what the pipeline does about it.
+  # ---------------------------------------------------------------------------
+  accepted_exceptions:
+    accounts_duplicate_pk:
+      max_rows: 4
+      resolution: "staging de-duplicates on account_id, keeping the first row deterministically"
+    events_duplicate_pk:
+      max_rows: 12000
+      resolution: "staging keeps one row per event_id via ROW_NUMBER()"
+    users_orphan_account:
+      max_rows: 12
+      resolution: "staging drops orphan users; they cannot be attributed to any account"
+    events_orphan_user:
+      max_rows: 500
+      resolution: "staging keeps the event (account attribution is still valid) but flags user_id as unknown"
+    events_pre_signup:
+      max_rows: 2500
+      resolution: "staging drops events dated before the account existed - they are provably wrong"
+    events_future_dated:
+      max_rows: 30
+      resolution: "staging drops future-dated events"
+    subs_invalid_term:
+      max_rows: 5
+      resolution: "staging drops terms whose end precedes their start - the interval is unusable"
+    subs_invalid_seats:
+      max_rows: 6
+      resolution: "staging nulls out non-positive seat counts so utilisation is NULL, not negative"
+    events_negative_qty:
+      max_rows: 200
+      resolution: "staging drops non-positive quantities; they would cancel out real usage"
+
+# ---------------------------------------------------------------------------
+# Metric definitions (Phases 5-7) - these mirror docs/business_problem.md
+# ---------------------------------------------------------------------------
+metrics:
+  # The REPORTING WINDOW. Stated explicitly rather than inferred from the data,
+  # because inferring it means one stray mis-dated event silently stretches
+  # every trend chart backwards by two years. The window is a business decision.
+  analysis_start_month: "2024-08-01"
+  analysis_end_month: "2026-07-01"
+
+  min_days_active_for_eligible_month: 15   # eligibility window
+  mom_volume_floor_events: 20              # below this, % change is meaningless
+  decline_threshold_mom: -0.40             # "declining account"
+  sustained_decline_threshold: -0.25       # on 3-month rolling average
+  rolling_window_months: 3
+  low_seat_utilisation_threshold: 0.30
+  engagement_low_active_days: 3            # active days per month
+
+# ---------------------------------------------------------------------------
+# Risk scoring weights (Phase 7) - transparent, explainable, tunable
+# ---------------------------------------------------------------------------
+risk_weights:
+  # Tuned after inspecting the first output: the original weights put every
+  # dormant account in the High band and left actively-collapsing accounts in
+  # Medium, which is backwards for a CSM - an account still using the product is
+  # the one you can still save. Chronic dormancy now scores separately from a
+  # single quiet month, and a sustained + sharp decline together clears High.
+  zero_usage_month: 35            # one month with no usage
+  dormant_2m: 20                  # ...and STILL nothing the month after
+  sustained_decline: 25
+  sharp_mom_decline: 20
+  low_seat_utilisation: 10
+  single_active_user: 10          # key-person risk
+  narrow_feature_adoption: 8
+  low_engagement_frequency: 10
+  high_priority_tickets: 5
+  renewal_within_90_days: 10
+
+risk_bands:
+  high: 60        # score >= 60
+  medium: 30      # score >= 30
+  # below 30 = low
